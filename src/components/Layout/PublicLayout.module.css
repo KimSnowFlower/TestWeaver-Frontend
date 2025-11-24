@@ -1,4 +1,5 @@
 .layout {
+    background-image: var(--bg-image);
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -8,37 +9,45 @@
 .header {
     height: 60px;
     border-bottom: 1px solid #eaeaea;
-    display: flex;
+    display: grid;
     align-items: center;
     padding: 0 24px;
-    justify-content: space-between;
-    background: var(--bg);
+    grid-template-columns: 1fr auto 1fr;
+    background: none;
     position: sticky;
     top: 0;
     z-index: 10;
 }
 
 .left .logo {
-    font-size: 20px;
+    font-size: 36px;
     font-weight: 700;
     text-decoration: none;
-    color: var(--text);
+    color: var(--text-white);
 }
 
 .centerNav a {
     margin: 0 16px;
     text-decoration: none;
+    font-size: 36px;
     font-weight: 500;
-    color: #333;
+    color: var(--text-white);
+    text-align: center;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .right .loginBtn {
+    height: 45px;
     padding: 6px 12px;
-    border: 1px solid #333;
+    border: 1px solid var(--bg);
     border-radius: 6px;
     text-decoration: none;
-    font-size: 14px;
-    color: #333;
+    font-size: 20px;
+    color: var(--text-white);
 }
 
 .main {

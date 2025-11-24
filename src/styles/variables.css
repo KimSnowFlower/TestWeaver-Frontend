@@ -4,7 +4,10 @@
     --danger: #eb3b5a;
     --success: #20bf6b;
     --bg: #fff;
+    --text-white: #fff;
     --text: #2f3542;
     --border: #dcdde1;
-    --radius: 8px;
+    --radius: 16px;
+
+    --bg-image: url("/tw_background.jpg");
 }

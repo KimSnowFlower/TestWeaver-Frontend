@@ -5,8 +5,7 @@ export default function HomePage() {
     return (
         <PublicLayout>
             <div className={styles.container}>
-                <h1>TestWeaver</h1>
-                <p>Powerful Pairwise / IPO / IPOG Test Case Generator</p>
+                <p>Powerful Pairwise / IPO / IPOG <br /> Test Case Generator</p>
                 <button className={styles.startBtn}>Get Started</button>
             </div>
         </PublicLayout>
