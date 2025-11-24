@@ -21,7 +21,7 @@ import ProjectListPage from "../pages/Project/ProjectListPage";
 import OverviewPage from "../pages/Project/OverviewPage";
 import ModelPage from "../pages/Project/ModelPage";
 import GeneratePage from "../pages/Project/GeneratePage";
-import TestCasesPage from "../pages/Project/TestCasePage";
+import TestCasesPage from "../pages/Project/TestCasesPage";
 import ExportPage from "../pages/Project/ExportPage";
 
 // Not Found
