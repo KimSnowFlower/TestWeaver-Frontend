@@ -17,6 +17,13 @@ import ProjectListPage from "../pages/Project/ProjectListPage";
 //import ProjectCreatePage from "../pages/Project/ProjectCreatePage";
 //import ProjectDetailPage from "../pages/Project/ProjectDetailPage";
 
+// Projects 내부
+import OverviewPage from "../pages/Project/OverviewPage";
+import ModelPage from "../pages/Project/ModelPage";
+import GeneratePage from "../pages/Project/GeneratePage";
+import TestCasesPage from "../pages/Project/TestCasePage";
+import ExportPage from "../pages/Project/ExportPage";
+
 // Not Found
 //import NotFoundPage from "../pages/NotFoundPage";
 
@@ -38,6 +45,13 @@ export default function AppRouter() {
 
                 {/* Project */}
                 <Route path="/projects" element={<ProjectListPage />} />
+
+                {/* Project 내부 페이지 */}
+                <Route path="/projects/:id/overview" element={<OverviewPage />} />
+                <Route path="/projects/:id/model" element={<ModelPage />} />
+                <Route path="/projects/:id/generate" element={<GeneratePage />} />
+                <Route path="/projects/:id/testcases" element={<TestCasesPage />} />
+                <Route path="/projects/:id/export" element={<ExportPage />} />
             </Routes>
         </BrowserRouter>
     );

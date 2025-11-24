@@ -1,0 +1,31 @@
+import { NavLink, useParams } from "react-router-dom";
+import styles from "./ProjectLayout.module.css";
+
+export default function ProjectTabs() {
+    const { id } = useParams();
+
+    const tabs = [
+        { name: "Project List", path: "/projects" },
+        { name: "Overview", path: `/projects/${id}/overview` },
+        { name: "Model", path: `/projects/${id}/model` },
+        { name: "Generate", path: `/projects/${id}/generate` },
+        { name: "TestCases", path: `/projects/${id}/testcases` },
+        { name: "Export", path: `/projects/${id}/export` },
+    ];
+
+    return (
+        <nav className={styles.tabs}>
+            {tabs.map((tab) => (
+                <NavLink
+                    key={tab.name}
+                    to={tab.path}
+                    className={({ isActive }) =>
+                        isActive ? styles.activeTab : styles.tab
+                    }
+                >
+                    {tab.name}
+                </NavLink>
+            ))}
+        </nav>
+    );
+}

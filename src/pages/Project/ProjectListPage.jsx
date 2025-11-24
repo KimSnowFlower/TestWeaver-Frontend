@@ -42,7 +42,7 @@ export default function ProjectListPage() {
                         <div
                             key={p.id}
                             className={styles.projectCard}
-                            onClick={() => navigate(`/projects/${p.id}`)}
+                            onClick={() => navigate(`/projects/${p.id}/overview`)}
                         >
                             <h3>{p.name}</h3>
                             <p className={styles.desc}>{p.description}</p>
