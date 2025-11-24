@@ -13,7 +13,7 @@ import FindIdPage from "../pages/Auth/FindIdPage";
 import ResetPwPage from "../pages/Auth/ResetPwPage";
 
 // Projects pages (로그인 이후)
-//import ProjectListPage from "../pages/Project/ProjectListPage";
+import ProjectListPage from "../pages/Project/ProjectListPage";
 //import ProjectCreatePage from "../pages/Project/ProjectCreatePage";
 //import ProjectDetailPage from "../pages/Project/ProjectDetailPage";
 
@@ -35,6 +35,9 @@ export default function AppRouter() {
                 <Route path="/auth/register" element={<RegisterPage />} />
                 <Route path="/auth/find-id" element={<FindIdPage />} />
                 <Route path="/auth/reset-password" element={<ResetPwPage />} />
+
+                {/* Project */}
+                <Route path="/projects" element={<ProjectListPage />} />
             </Routes>
         </BrowserRouter>
     );

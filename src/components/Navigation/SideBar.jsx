@@ -4,14 +4,18 @@ import styles from "./SideBar.module.css";
 export default function SideBar() {
     return (
         <aside className={styles.sidebar}>
-            <h2 className={styles.logo}>TestWeaver</h2>
+            <div className={styles.logo}>TestWeaver</div>
 
-            <nav>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/projects">Projects</Link></li>
-                    <li><Link to="/testcases/generate">Add Test Case</Link></li>
-                </ul>
+            <nav className={styles.menu}>
+                <Link to="/projects" className={styles.item}>
+                    Projects
+                </Link>
+                <Link to="/docs" className={styles.item}>
+                    Docs
+                </Link>
+                <Link to="/help" className={styles.item}>
+                    Help
+                </Link>
             </nav>
         </aside>
     );
