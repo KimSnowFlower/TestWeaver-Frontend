@@ -1,0 +1,13 @@
+.sidebar {
+    width: 220px;
+    background: white;
+    height: 100vh;
+    border-right: 1px solid var(--border);
+    padding: 24px;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
