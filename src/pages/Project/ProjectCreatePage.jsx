@@ -14,7 +14,7 @@ export default function ProjectCreatePage() {
                 </div>
 
                 <div className={styles.inputWrapper}>
-                    <CircleVerticalBar text="1" color="#393E46" barHeight={220} />
+                    <CircleVerticalBar text="1" color="#393E46" barHeight={200} />
 
                     <div className={styles.general}>
                         <div className={styles.inputTitle}>General</div>
@@ -25,7 +25,7 @@ export default function ProjectCreatePage() {
                 </div>
 
                 <div className={styles.inputWrapper}>
-                    <CircleVerticalBar text="2" color="#393E46" barHeight={250} />
+                    <CircleVerticalBar text="2" color="#393E46" barHeight={220} />
 
                     <div className={styles.general}>
                         <div className={styles.inputTitle}>Configuration</div>
@@ -61,9 +61,11 @@ export default function ProjectCreatePage() {
                                 </label>
                             </div>
                         </div>
-
-                        <Button type="submit">Create Test Case</Button>
                     </div>
+                </div>
+
+                <div className={styles.buttonWrapper}>
+                    <Button type="submit">Create Test Case</Button>
                 </div>
             </div>
         </MainLayout >

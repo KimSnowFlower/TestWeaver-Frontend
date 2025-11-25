@@ -29,9 +29,11 @@
 }
 
 .general {
+    width: 800px;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    padding: 8px;
 }
 
 .inputTitle {
@@ -42,34 +44,24 @@
     padding-bottom: 16px;
 }
 
-.general :global(input) {
-    width: 350px;
-    height: 48px;
-    font-size: 16px;
-    padding: 10px 14px;
-}
-
-.general :global(label) {
-    color: var(--text-white);
-    padding-left: 8px;
-    padding-bottom: 16px;
-}
-
 .radioGroupWrapper {
     display: flex;
     flex-direction: column;
+    padding-left: 12px;
+    padding-bottom: 12px;
 }
 
 .radioTitle {
     font-size: 24px;
+    font-weight: 700;
     color: var(--text-white);
-    padding-left: 8px;
     padding-bottom: 16px;
 }
 
 .radioGroup {
     display: flex;
     align-items: center;
+    gap: 24px;
 }
 
 .radioGroup label {
@@ -83,4 +75,8 @@
 .radioGroup input {
     width: 25px;
     height: 25px;
+}
+
+.buttonWrapper {
+    margin-left: 64px;
 }
