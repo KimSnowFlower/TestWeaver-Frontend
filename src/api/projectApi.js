@@ -6,30 +6,30 @@ export const projectApi = {
             params: { q }
         });
 
-        return res.data.data;
+        return res.data;
     },
 
     create: async (data) => {
         const res = await api.post("/projects", data);
 
-        return res.data.data;
+        return res.data;
     },
 
     detail: async (id) => {
         const res = await api.get(`/projects/${id}`);
 
-        return res.data.data;
+        return res.data;
     },
 
     update: async (id, data) => {
         const res = await api.put(`/projects/${id}`, data);
 
-        return res.data.data;
+        return res.data;
     },
 
     remove: async (id) => {
         const res = await api.delete(`/projects/${id}`);
 
-        return res.data.data;
+        return res.data;
     }
 };
