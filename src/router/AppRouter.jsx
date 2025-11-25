@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
+import ProtectedRoute from "./ProtectedRoute";
+
 // Public Page
 import HomePage from "../pages/Home/HomePage";
 import DocsPage from "../pages/Home/DocsPage";
@@ -42,16 +44,18 @@ export default function AppRouter() {
             <Route path="/auth/find-id" element={<FindIdPage />} />
             <Route path="/auth/reset-password" element={<ResetPwPage />} />
 
-            {/* Project */}
-            <Route path="/projects" element={<ProjectListPage />} />
-            <Route path="/projects/create" element={<ProjectCreatePage />} />
+            <Route element={<ProtectedRoute />}>
+                {/* Project */}
+                <Route path="/projects" element={<ProjectListPage />} />
+                <Route path="/projects/create" element={<ProjectCreatePage />} />
 
-            {/* Project 내부 페이지 */}
-            <Route path="/projects/:id/overview" element={<OverviewPage />} />
-            <Route path="/projects/:id/model" element={<ModelPage />} />
-            <Route path="/projects/:id/generate" element={<GeneratePage />} />
-            <Route path="/projects/:id/testcases" element={<TestCasesPage />} />
-            <Route path="/projects/:id/export" element={<ExportPage />} />
+                {/* Project 내부 페이지 */}
+                <Route path="/projects/:id/overview" element={<OverviewPage />} />
+                <Route path="/projects/:id/model" element={<ModelPage />} />
+                <Route path="/projects/:id/generate" element={<GeneratePage />} />
+                <Route path="/projects/:id/testcases" element={<TestCasesPage />} />
+                <Route path="/projects/:id/export" element={<ExportPage />} />
+            </Route>
         </Routes>
     );
 }
