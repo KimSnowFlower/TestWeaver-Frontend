@@ -1,3 +1,7 @@
+.title {
+    color: var(--text-white);
+}
+
 .header {
     display: flex;
     justify-content: space-between;

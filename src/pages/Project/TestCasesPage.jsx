@@ -60,7 +60,7 @@ export default function TestCasesPage() {
 
     return (
         <ProjectLayout>
-            <h1>Generated Test Cases</h1>
+            <h1 className={styles.title}>Generated Test Cases</h1>
 
             {/* Export 영역 */}
             <div className={styles.exportSection}>
@@ -83,7 +83,7 @@ export default function TestCasesPage() {
             <table className={styles.table}>
                 <thead>
                     <tr>
-                        <th>#</th>
+                        <th>No</th>
                         {cases.length > 0 &&
                             Object.keys(cases[0]).map((key) => (
                                 <th key={key}>{key}</th>

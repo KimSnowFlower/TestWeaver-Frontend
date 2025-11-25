@@ -1,4 +1,4 @@
-import { NavLink, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styles from "./ProjectLayout.module.css";
 
 export default function ProjectTabs() {
@@ -11,17 +11,17 @@ export default function ProjectTabs() {
 
     return (
         <nav className={styles.tabs}>
-            <h1 className={styles.title}>TestWeaver</h1>
+            <Link to="/" className={styles.title}>TestWeaver</Link>
 
             <p className={styles.info}>Info</p>
             {tabs.map((tab) => (
-                <NavLink
+                <Link
                     key={tab.name}
                     to={tab.path}
                     className={styles.tab}
                 >
                     {tab.name}
-                </NavLink>
+                </Link>
             ))}
         </nav>
     );
