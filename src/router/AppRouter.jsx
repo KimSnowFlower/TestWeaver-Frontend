@@ -14,7 +14,7 @@ import ResetPwPage from "../pages/Auth/ResetPwPage";
 
 // Projects pages (로그인 이후)
 import ProjectListPage from "../pages/Project/ProjectListPage";
-//import ProjectCreatePage from "../pages/Project/ProjectCreatePage";
+import ProjectCreatePage from "../pages/Project/ProjectCreatePage";
 //import ProjectDetailPage from "../pages/Project/ProjectDetailPage";
 
 // Projects 내부
@@ -45,6 +45,7 @@ export default function AppRouter() {
 
                 {/* Project */}
                 <Route path="/projects" element={<ProjectListPage />} />
+                <Route path="/projects/create" element={<ProjectCreatePage />} />
 
                 {/* Project 내부 페이지 */}
                 <Route path="/projects/:id/overview" element={<OverviewPage />} />
