@@ -10,7 +10,7 @@ export const authApi = {
     login: async (data) => {
         const res = await api.post("/auth/login", data);
 
-        return res.data.data;
+        return res.data;
     },
 
     logout: async () => {
@@ -35,5 +35,11 @@ export const authApi = {
         const res = await api.post("/auth/change-password", data);
 
         return res.data.success;
+    },
+
+    me: async () => {
+        const res = await api.get("/auth/me");
+
+        return res.data;
     },
 };

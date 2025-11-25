@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // Public Page
 import HomePage from "../pages/Home/HomePage";
@@ -29,31 +29,29 @@ import ExportPage from "../pages/Project/ExportPage";
 
 export default function AppRouter() {
     return (
-        <BrowserRouter>
-            <Routes>
-                {/* Public */}
-                <Route path="/" element={<HomePage />} />
-                <Route path="/docs" element={<DocsPage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/help" element={<HelpPage />} />
+        <Routes>
+            {/* Public */}
+            <Route path="/" element={<HomePage />} />
+            <Route path="/docs" element={<DocsPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/help" element={<HelpPage />} />
 
-                {/* Auth */}
-                <Route path="/auth/login" element={<LoginPage />} />
-                <Route path="/auth/register" element={<RegisterPage />} />
-                <Route path="/auth/find-id" element={<FindIdPage />} />
-                <Route path="/auth/reset-password" element={<ResetPwPage />} />
+            {/* Auth */}
+            <Route path="/auth/login" element={<LoginPage />} />
+            <Route path="/auth/register" element={<RegisterPage />} />
+            <Route path="/auth/find-id" element={<FindIdPage />} />
+            <Route path="/auth/reset-password" element={<ResetPwPage />} />
 
-                {/* Project */}
-                <Route path="/projects" element={<ProjectListPage />} />
-                <Route path="/projects/create" element={<ProjectCreatePage />} />
+            {/* Project */}
+            <Route path="/projects" element={<ProjectListPage />} />
+            <Route path="/projects/create" element={<ProjectCreatePage />} />
 
-                {/* Project 내부 페이지 */}
-                <Route path="/projects/:id/overview" element={<OverviewPage />} />
-                <Route path="/projects/:id/model" element={<ModelPage />} />
-                <Route path="/projects/:id/generate" element={<GeneratePage />} />
-                <Route path="/projects/:id/testcases" element={<TestCasesPage />} />
-                <Route path="/projects/:id/export" element={<ExportPage />} />
-            </Routes>
-        </BrowserRouter>
+            {/* Project 내부 페이지 */}
+            <Route path="/projects/:id/overview" element={<OverviewPage />} />
+            <Route path="/projects/:id/model" element={<ModelPage />} />
+            <Route path="/projects/:id/generate" element={<GeneratePage />} />
+            <Route path="/projects/:id/testcases" element={<TestCasesPage />} />
+            <Route path="/projects/:id/export" element={<ExportPage />} />
+        </Routes>
     );
 }

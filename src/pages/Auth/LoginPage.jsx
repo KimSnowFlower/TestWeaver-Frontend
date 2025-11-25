@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { authApi } from "../../api/authApi";
+import { useAuth } from "../../context/AuthContext";
 
 import AuthLayout from "../../components/Layout/AuthLayout";
 import Input from "../../components/UI/Input";
@@ -7,6 +9,9 @@ import Button from "../../components/UI/Button";
 import styles from "./Auth.module.css";
 
 export default function LoginPage() {
+    const navigate = useNavigate();
+    const { login } = useAuth();
+
     const [form, setForm] = useState({ loginId: "", password: "" });
 
     const onChange = (e) =>
@@ -15,17 +20,17 @@ export default function LoginPage() {
     const onSubmit = async (e) => {
         e.preventDefault();
 
-        authApi.login(form);
+        const res = await authApi.login(form);
+        login(res);
 
-        alert("로그인 성공");
-        window.location.href = "/";
+        navigate("/");
     };
 
     return (
         <AuthLayout title="Login">
             <form className={styles.form} onSubmit={onSubmit}>
-                <Input placeholder="User Id" onChange={onChange} />
-                <Input type="password" placeholder="User Password" onChange={onChange} />
+                <Input name="loginId" placeholder="User Id" autoComplete="userId" onChange={onChange} />
+                <Input name="password" type="password" placeholder="User Password" autoComplete="current-password" onChange={onChange} />
 
                 <Button type="submit">Sing in</Button>
 
