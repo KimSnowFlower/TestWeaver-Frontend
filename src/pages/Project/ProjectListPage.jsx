@@ -1,7 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 import MainLayout from "../../components/Layout/MainLayout";
 import Button from "../../components/UI/Button";
 import styles from "./Project.module.css";
-import { useNavigate } from "react-router-dom";
 
 export default function ProjectListPage() {
     const navigate = useNavigate();
@@ -30,31 +31,44 @@ export default function ProjectListPage() {
 
                 {/* 헤더 영역 */}
                 <div className={styles.header}>
-                    <h1 className={styles.title}>My Projects</h1>
+                    <div className={styles.headerLeft}>
+                        <h1 className={styles.title}>My Projects</h1>
+                        <p className={styles.subtitle}>A directory of your Dashboard.</p>
+                    </div>
+
                     <Button onClick={() => navigate("/projects/create")}>
-                        + 새 프로젝트
+                        Create New Test Case
                     </Button>
                 </div>
 
                 {/* 프로젝트 리스트 */}
-                <div className={styles.projectList}>
-                    {projects.map((p) => (
-                        <div
-                            key={p.id}
-                            className={styles.projectCard}
-                            onClick={() => navigate(`/projects/${p.id}/overview`)}
-                        >
-                            <h3>{p.name}</h3>
-                            <p className={styles.desc}>{p.description}</p>
+                <div className={styles.tableWrapper}>
+                    <table className={styles.table}>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Project Name</th>
+                                <th>Description</th>
+                                <th>Last Updated</th>
+                            </tr>
+                        </thead>
 
-                            <div className={styles.meta}>
-                                <span>케이스: {p.testCaseCount}개</span>
-                                <span>업데이트: {p.updatedAt}</span>
-                            </div>
-                        </div>
-                    ))}
+                        <tbody>
+                            {projects.map((p, index) => (
+                                <tr
+                                    key={p.id}
+                                    className={styles.row}
+                                    onClick={() => navigate(`/projects/${p.id}/overview`)}
+                                >
+                                    <td>{index + 1}</td>
+                                    <td>{p.name}</td>
+                                    <td className={styles.descCell}>{p.description}</td>
+                                    <td>{p.updatedAt}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
-
             </div>
         </MainLayout>
     );

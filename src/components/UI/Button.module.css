@@ -9,7 +9,6 @@
     align-items: center;
 }
 
-/* ---- Sizes ---- */
 .small {
     padding: 6px 12px;
     font-size: 14px;
@@ -25,14 +24,13 @@
     font-size: 16px;
 }
 
-/* ---- Variants ---- */
 .primary {
-    background: var(--bg);
+    background: var(--active-color);
     color: var(--text-black);
 }
 
 .primary:hover {
-    background: var(--bg);
+    background: var(--active-color);
 }
 
 .outline {
@@ -54,7 +52,6 @@
     background: #efefef;
 }
 
-/* ---- Disabled ---- */
 .button:disabled {
     opacity: 0.6;
     cursor: not-allowed;
