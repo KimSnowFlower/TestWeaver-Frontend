@@ -11,16 +11,13 @@ export default function ProjectDetailPage() {
     const navigate = useNavigate();
     const { id } = useParams();
 
-    /** Parameter States */
     const [params, setParams] = useState([]);
     const [newParam, setNewParam] = useState("");
     const [newValues, setNewValues] = useState("");
 
-    /** Strategy States */
     const [strategy, setStrategy] = useState("IPO");
     const [coverage, setCoverage] = useState("2-way");
 
-    /** Parameter 추가 */
     const addParam = () => {
         if (!newParam || !newValues) return;
 
@@ -34,12 +31,10 @@ export default function ProjectDetailPage() {
         setNewValues("");
     };
 
-    /** Parameter 삭제 */
     const removeParam = (index) => {
         setParams(params.filter((_, i) => i !== index));
     };
 
-    /** Save/Generate */
     const saveModel = async () => {
         if (params.length === 0)
             return;

@@ -1,5 +1,7 @@
 :root {
     --bg: #222831;
+    --bg-white: #EEEEEE;
+    --bg-gray: #393E46;
     --bg-image: url("/tw_background.jpg");
 
     --text-white: #EEEEEE;

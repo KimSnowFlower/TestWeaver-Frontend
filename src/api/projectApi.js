@@ -40,6 +40,6 @@ export const projectApi = {
 
     getTestCases: async (projectId) => {
         const res = await api.get(`/projects/${projectId}/testcases`);
-        return res.data.data;
+        return res.data;
     },
 };

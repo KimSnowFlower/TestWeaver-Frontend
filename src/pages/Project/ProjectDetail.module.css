@@ -1,17 +1,19 @@
 .container {
-    width: 100%;
+    width: 60%;
     padding: 20px 0;
+    margin: 0 auto;
 }
 
 .pageTitle {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 30px;
+    color: var(--text-white);
 }
 
 .section {
     margin-top: 30px;
-    background: white;
+    background: var(--bg-gray);
     padding: 20px;
     border-radius: 12px;
 }
@@ -19,13 +21,47 @@
 .sectionTitle {
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 16px;
+    color: var(--text-white);
+}
+
+.radioGroup input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    background: transparent;
+    transition: 0.2s ease;
+}
+
+.radioGroup input[type="radio"]:checked {
+    border-color: var(--active-color);
+    background-color: var(--active-color);
+}
+
+.radioGroup label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-white);
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .row {
     display: flex;
     gap: 12px;
     margin-bottom: 20px;
+}
+
+.row button {
+    width: 100px;
+    height: 40px;
+    margin-top: 30px;
+    font-size: 16px;
+    text-align: center;
 }
 
 .tableWrapper {
@@ -40,8 +76,16 @@
 
 .table th,
 .table td {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border-color);
     padding: 10px;
+}
+
+.table tbody td {
+    color: var(--text-white);
+}
+
+.table tbody td:last-child {
+    text-align: right;
 }
 
 .radioGroup {
