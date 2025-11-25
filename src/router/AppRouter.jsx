@@ -22,7 +22,6 @@ import ProjectDetailPage from "../pages/Project/ProjectDetailPage";
 // Projects 내부
 import OverviewPage from "../pages/Project/OverviewPage";
 import TestCasesPage from "../pages/Project/TestCasesPage";
-import ExportPage from "../pages/Project/ExportPage";
 
 // Not Found
 //import NotFoundPage from "../pages/NotFoundPage";
@@ -51,7 +50,6 @@ export default function AppRouter() {
                 {/* Project 내부 페이지 */}
                 <Route path="/projects/:id/overview" element={<OverviewPage />} />
                 <Route path="/projects/:id/testcases" element={<TestCasesPage />} />
-                <Route path="/projects/:id/export" element={<ExportPage />} />
             </Route>
         </Routes>
     );

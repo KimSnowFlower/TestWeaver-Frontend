@@ -29,3 +29,25 @@ td {
     padding: 10px;
     border-bottom: 1px solid #eee;
 }
+
+.exportSection {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.exportBtn {
+    padding: 8px 16px;
+    background: var(--primary-color);
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}

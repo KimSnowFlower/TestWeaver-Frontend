@@ -18,6 +18,17 @@
     overflow-y: auto;
 }
 
+.title {
+    color: var(--text-white);
+}
+
+.info {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-white);
+    padding: 10px auto;
+}
+
 .tabs {
     display: flex;
     flex-direction: column;

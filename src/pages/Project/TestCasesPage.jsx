@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { projectApi } from "../../api/projectApi";
+import { testcaseApi } from "../../api/testcaseApi";
 import ProjectLayout from "../../components/Project/ProjectLayout";
 import styles from "./TestCases.module.css";
 
@@ -8,6 +9,7 @@ export default function TestCasesPage() {
     const { id } = useParams();
     const [sets, setSets] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [format, setFormat] = useState("csv");
 
     useEffect(() => {
         load();
@@ -16,13 +18,29 @@ export default function TestCasesPage() {
     const load = async () => {
         try {
             const res = await projectApi.getTestCases(id);
-
             setSets(res.data || []);
         } catch (err) {
             console.error(err);
             setSets([]);
         } finally {
             setLoading(false);
+        }
+    };
+
+    const handleExport = async () => {
+        try {
+            const res = await testcaseApi.export(id, format);
+
+            const blob = new Blob([res.data]);
+            const url = window.URL.createObjectURL(blob);
+
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = `testcases_${id}.${format === "excel" ? "xlsx" : format}`;
+            a.click();
+            window.URL.revokeObjectURL(url);
+        } catch (err) {
+            console.error("Export failed", err);
         }
     };
 
@@ -44,6 +62,24 @@ export default function TestCasesPage() {
         <ProjectLayout>
             <h1>Generated Test Cases</h1>
 
+            {/* Export 영역 */}
+            <div className={styles.exportSection}>
+                <select
+                    className={styles.select}
+                    value={format}
+                    onChange={(e) => setFormat(e.target.value)}
+                >
+                    <option value="csv">CSV</option>
+                    <option value="excel">Excel (.xlsx)</option>
+                    <option value="gherkin">Gherkin</option>
+                </select>
+
+                <button className={styles.exportBtn} onClick={handleExport}>
+                    다운로드
+                </button>
+            </div>
+
+            {/* 테이블 */}
             <table className={styles.table}>
                 <thead>
                     <tr>

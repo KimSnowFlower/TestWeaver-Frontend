@@ -5,14 +5,15 @@ export default function ProjectTabs() {
     const { id } = useParams();
 
     const tabs = [
-        { name: "Project List", path: "/projects" },
-        { name: "Overview", path: `/projects/${id}/detail` },
-        { name: "TestCases", path: `/projects/${id}/testcases` },
-        { name: "Export", path: `/projects/${id}/export` },
+        { name: "Model", path: `/projects/${id}/detail` },
+        { name: "Test Cases", path: `/projects/${id}/testcases` },
     ];
 
     return (
         <nav className={styles.tabs}>
+            <h1 className={styles.title}>TestWeaver</h1>
+
+            <p className={styles.info}>Info</p>
             {tabs.map((tab) => (
                 <NavLink
                     key={tab.name}
