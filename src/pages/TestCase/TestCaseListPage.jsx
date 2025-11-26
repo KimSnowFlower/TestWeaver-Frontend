@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { projectApi } from "../../api/projectApi";
 import { testcaseApi } from "../../api/testcaseApi";
 
-import TestCasesLayout from "../../components/Layout/TestCasesLayout";
+import TestCasesLayout from "../../components/Layout/TestCases/TestCasesLayout";
 import styles from "./TestCaseList.module.css";
 
 export default function TestCaseListPage() {

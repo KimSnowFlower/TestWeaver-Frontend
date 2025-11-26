@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { authApi } from "../../api/authApi";
 import { useAuth } from "../../context/AuthContext";
 
-import AuthLayout from "../../components/Layout/AuthLayout";
+import AuthLayout from "../../components/Layout/Auth/AuthLayout";
 import Input from "../../components/UI/Input";
 import Button from "../../components/UI/Button";
 import styles from "./Auth.module.css";

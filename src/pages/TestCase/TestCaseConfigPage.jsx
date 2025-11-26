@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { projectApi } from "../../api/projectApi";
 
-import TestCasesLayout from "../../components/Layout/TestCasesLayout";
+import TestCasesLayout from "../../components/Layout/TestCases/TestCasesLayout";
 import Input from "../../components/UI/Input";
 import Button from "../../components/UI/Button";
 import styles from "./TestCaseConfig.module.css";

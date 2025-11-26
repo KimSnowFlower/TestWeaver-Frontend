@@ -1,4 +1,4 @@
-import PublicLayout from "../../components/Layout/PublicLayout";
+import PublicLayout from "../../components/Layout/Public/PublicLayout";
 
 export default function DocsPage() {
     return (

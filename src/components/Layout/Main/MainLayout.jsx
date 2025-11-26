@@ -1,4 +1,4 @@
-import SideBar from "../Navigation/SideBar";
+import SideBar from "../../Navigation/SideBar";
 import styles from "./MainLayout.module.css";
 
 export default function MainLayout({ children }) {

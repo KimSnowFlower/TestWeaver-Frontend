@@ -1,4 +1,4 @@
-import PublicLayout from "../../components/Layout/PublicLayout";
+import PublicLayout from "../../components/Layout/Public/PublicLayout";
 import styles from "./Home.module.css";
 
 export default function HomePage() {

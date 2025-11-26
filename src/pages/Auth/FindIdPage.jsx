@@ -1,4 +1,4 @@
-import AuthLayout from "../../components/Layout/AuthLayout";
+import AuthLayout from "../../components/Layout/Auth/AuthLayout";
 import Input from "../../components/UI/Input";
 import Button from "../../components/UI/Button";
 import styles from "./Auth.module.css";

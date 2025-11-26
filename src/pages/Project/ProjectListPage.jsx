@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { projectApi } from "../../api/projectApi";
 
-import MainLayout from "../../components/Layout/MainLayout";
+import MainLayout from "../../components/Layout/Main/MainLayout";
 import Button from "../../components/UI/Button";
 import styles from "./Project.module.css";
 
