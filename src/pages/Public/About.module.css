@@ -1,0 +1,150 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text-white);
+    text-align: center;
+}
+
+.hero {
+    margin-bottom: 60px;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: var(--text-white);
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-white);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #393E46, transparent);
+    margin: 60px 0;
+}
+
+.missionSection {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 80px;
+    text-align: left;
+}
+
+.missionCard {
+    flex: 1;
+    background: var(--bg-gray);
+    padding: 40px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.missionCard:hover {
+    transform: translateY(-5px);
+}
+
+.solution {
+    border: 1px solid var(--primary);
+    background: rgba(75, 123, 236, 0.1);
+}
+
+.missionCard h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    color: var(--text-white);
+}
+
+.missionCard p {
+    color: var(--text-white);
+    line-height: 1.7;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Tech Stack */
+.techSection {
+    margin-bottom: 80px;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--text-white);
+}
+
+.techGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.techItem {
+    background: var(--bg);
+    /* #222831 */
+    border: 1px solid var(--bg-gray);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.techLabel {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    /* #778ca3 */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.techItem strong {
+    font-size: 1.1rem;
+    color: var(--active-color);
+    /* #FFD369 */
+}
+
+/* Profile Section */
+.profileSection {
+    background: linear-gradient(180deg, rgba(57, 62, 70, 0) 0%, rgba(57, 62, 70, 0.5) 100%);
+    padding: 40px;
+    border-radius: var(--radius);
+}
+
+.profileCard p {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.githubBtn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--text-white);
+    color: var(--text-black);
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.githubBtn:hover {
+    background-color: var(--primary);
+    color: white;
+    transform: scale(1.05);
+}
